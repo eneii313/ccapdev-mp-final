@@ -19,4 +19,7 @@ CCAPDEV Machine Project
 + A visitor must register if they want to post or comment. Here, a visitor must enter their username, email address, and password. Both the username and email address must be unique and cannot be changed afterwards. The user can also opt have an avatar and a short description of themselves.
 + After registering properly, the visitor will automatically be logged in.
 Upon logging in, the user can start posting and commenting. Users stay logged in even if they exit the website. The user may log out whenever they want through the navigation bar.
++ Each registered user has their own page which shows their profile publicly. On the same page, a visitor may see the user’s username, avatar and short description. They can also see the user’s posts and comments, which are sorted by the most recent.
++ A logged in user can create, update, and delete their own posts and comments. They can also like a post or a comment (including their own) once.
++ A logged in user can update their profile picture and description.
 
