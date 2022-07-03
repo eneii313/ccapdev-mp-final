@@ -60,18 +60,18 @@ Account 5:
 ```
 
 ## NPM Packages and Third Party Libraries
-    + bcrypt 5.0.1
-    + bcryptjs 2.4.3
-    + connect-flash 0.1.1
-    + cookie-parser 1.4.6
-    + dotenv 16.0.1
-    + express 4.18.1
-    + express-fileupload 1.4.0
-    + express-handlebars 6.0.6
-    + express-session 1.17.3
-    + hbs 4.2.0
-    + moment 2.29.3
-    + mongoose 6.4.0
-    + node-cache 5.1.2
-    + passport 0.6.0
-    + passport-local 1.0.0
++ bcrypt 5.0.1
++ bcryptjs 2.4.3
++ connect-flash 0.1.1
++ cookie-parser 1.4.6
++ dotenv 16.0.1
++ express 4.18.1
++ express-fileupload 1.4.0
++ express-handlebars 6.0.6
++ express-session 1.17.3
++ hbs 4.2.0
++ moment 2.29.3
++ mongoose 6.4.0
++ node-cache 5.1.2
++ passport 0.6.0
++ passport-local 1.0.0
