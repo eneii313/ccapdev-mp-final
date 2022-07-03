@@ -24,3 +24,11 @@ Upon logging in, the user can start posting and commenting. Users stay logged in
 + A logged in user can update their profile picture and description.
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
+## Sample Accounts
+<code>
+Account 1:
+	Username: anneKulit
+	Password: pass1234
+	Email: annekulit02@gmail.com
+</code>
+
