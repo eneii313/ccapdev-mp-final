@@ -75,3 +75,12 @@ Account 5:
 + node-cache 5.1.2
 + passport 0.6.0
 + passport-local 1.0.0
+
++ bootstrap-css 5.1.3
++ bootstrap-js 5.1.3
++ font-awesome 4.7.0
++ owl-carousel-css 2.3.4
++ owl-carousel-js 2.3.4
++ animate-css 4.1.1
++ jquery 3.6.0
++ popper 1.12.9
