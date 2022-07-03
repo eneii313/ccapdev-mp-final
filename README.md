@@ -25,7 +25,7 @@ Upon logging in, the user can start posting and commenting. Users stay logged in
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
 ## How To Run
-Click //DiscoverLAGUNA to see the deployed web application in Heroku
+Click //DiscoverLAGUNA to see the deployed web application in Heroku.
 
 ## Sample Accounts
 ```text
@@ -59,3 +59,19 @@ Account 5:
 	Email: juan.villamayor@email.com
 ```
 
+## NPM Packages and Third Party Libraries
+    + bcrypt 5.0.1
+    + bcryptjs 2.4.3
+    + connect-flash 0.1.1
+    + cookie-parser 1.4.6
+    + dotenv 16.0.1
+    + express 4.18.1
+    + express-fileupload 1.4.0
+    + express-handlebars 6.0.6
+    + express-session 1.17.3
+    + hbs 4.2.0
+    + moment 2.29.3
+    + mongoose 6.4.0
+    + node-cache 5.1.2
+    + passport 0.6.0
+    + passport-local 1.0.0
