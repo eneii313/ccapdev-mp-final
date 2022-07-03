@@ -1,0 +1,48 @@
+{{#section 'localCSS'}}
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login-signup.css">
+{{/section}}
+
+<div class="overlay">
+
+    <div class="container-fluid d-flex adjust-height position-relative">
+        <form id="form-login" class="mx-auto" action="/login" method="POST">
+            <h2>Login to interact with the DiscoverLAGUNA community!</h2>
+            <hr>
+            <div class="form-group mb-4">
+                <div class="row">
+                    <label class="col col-md-auto" for="login-username">Username</label>
+                    <p id="error-login-username" class="col error">{{#if nameError}} * {{nameError}}{{/if}}</p>
+                </div>
+                <input type="text" class="form-control form-control-lg" id="login-username" name="username" placeholder="Enter username"
+                    value={{username}}>
+            </div>
+            <div class="form-group mb-4">
+                <div class="row">
+                    <label class="col col-md-auto" for="login-password">Password</label>
+                    <p id="error-login-password" class="col error">{{#if passError}} * {{passError}}{{/if}}</p>
+                </div>
+                <input type="password" class="form-control form-control-lg" id="login-password" name="password" placeholder="Enter password"
+                    value={{password}}>
+            </div>
+            <button type="submit" id="login-submit" class="btn btn-lg" disabled="true">LOGIN</button>
+            <br/><br/>
+            <h6 class="lead">Don't have an account? <a href="/signup">Sign up</a></h6>
+        </form>
+    </div>
+
+    <a class="position-absolute bottom-0 end-0 img-source" href="https://lagunahotspring.com/festivals-in-laguna/">
+        Coconut Festival, San Pablo<br/>Original Photo</a>
+
+</div>
+
+
+{{#section 'JS'}}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="js/nav-bar.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+{{/section}}
+

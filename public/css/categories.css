@@ -1,0 +1,157 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #3B3B3B;
+    position: relative;
+}
+
+.posts {
+    padding-bottom: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.active {
+    text-decoration: underline !important;
+}
+
+.page {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    position: relative;
+}
+
+.category-name {
+    margin: 20px 30px;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.search .category-name {
+    text-transform: none;
+}
+
+.break {
+    height: 8px;
+}
+
+#must-eats, .post-container .fa-cutlery,
+.post-must-eats .post-counts {
+    color: #1C4508;
+}
+
+#must-visits, .post-container .fa-map-marker,
+.post-must-visits .post-counts {
+    color: #578E87;
+}
+
+#must-dos, .post-container .fa-ticket,
+.post-must-dos .post-counts {
+    color: #97AA00;
+}
+
+.post-details h2 {
+    margin: auto;
+}
+
+.post-likes, .post-dislikes,
+.post-comments {
+    font-size: 20px;
+    margin: auto;
+}
+
+.lead {
+    font-size: 18px;
+    padding: 12px 0;
+    margin-bottom: 0;
+}
+
+.posts {
+    position: relative;
+    width: 100%;
+    background-color: #F0F0F0;
+    flex: 1 1 auto;
+    border-top: 1px solid grey;
+}
+
+.post-container {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.post-details {
+    margin: 10px 0;
+}
+
+.post-details .sub-details {
+    margin-left: 24px;
+}
+
+.post-details h2 {
+    font-weight: bold;
+}
+
+.post-details a {
+    text-decoration: none !important;
+    color: #3B3B3B;
+}
+
+.post-details a:hover {
+    text-shadow: none !important;
+    text-decoration: underline !important;
+}
+
+.post-desc {
+    text-align: justify;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0), grey);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    
+}
+
+.post-image img {
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover img {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover .overlay {
+    opacity: 0.4;
+}
+
+.no-posts, .no-results {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: gray;
+}
+
+.no-posts i, .no-results i{
+    font-size: 80px;
+}

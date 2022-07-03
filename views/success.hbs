@@ -1,0 +1,61 @@
+{{#section 'localCSS'}}
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/users.css">
+{{/section}}
+
+<div class="position-relative page">
+    
+    <div class="col container-fluid adjust-height">
+        
+        <div class="row" id="welcome">
+            <div id="welcome-overlay">
+                <h1 class="col">Welcome to <img src="images/logo.png">, <span class="username">{{username}}</span> !</h1>
+                <div class="w-100"></div>
+                <h5 class = "col">You're almost done! Let's finish up your profile!</h5>
+            </div>
+        </div>
+
+        <form class="row container-fluid profile" action="/addProfile" method="POST" enctype="multipart/form-data">
+
+            <div class="col-4 user-details">
+                <img class="row avatar" src='..{{profilePic}}'>
+
+                <!-- Upload Image -->
+                <div class="row-auto d-flex justify-content-center container">
+                    <label id="label-avatar" for="upload-avatar"><i class="fa fa-camera"></i> Upload Profile Avatar</label>
+                    <input type="file" id="upload-avatar" accept="image/*" name="image"></input>
+                </div>
+
+                <input type="hidden" name="username" value={{username}}></input>
+                <h3 class="row-auto username">{{username}}</h3>
+                <h6 class="row-auto email">{{email}}</h6>
+                <h6 class="row-auto">Joined on <span class="join-date">{{trimDate dateJoined "MMMM DD, YYYY"}}</span></h6>
+                
+            </div>
+            
+            <div class="col-6 user-desc">
+                <h6 class="row"></h6>
+                <h6 class="row">Description: (optional)</h6>
+                <form class="row" id="edit-desc">
+                    <textarea class="row" rows="6" cols="65" name="desc"></textarea>
+                    <div class="break"></div>
+                    <button type="submit" id="save-account">Save Profile</button>
+                </form>
+            </div>
+            
+        </form>
+        
+    </div>
+    
+    <div class="break"></div>
+
+</div>
+
+{{#section 'JS'}}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="js/nav-bar.js"></script>
+    <script type="text/javascript" src="js/success.js"></script>
+{{/section}}

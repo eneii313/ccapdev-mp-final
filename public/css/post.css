@@ -1,0 +1,500 @@
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #3B3B3B;
+    position: relative;
+}
+
+.active {
+    text-decoration: underline !important;
+}
+
+.page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page a:hover {
+    color: inherit;
+    text-decoration: underline;
+    text-shadow: none;
+} 
+
+.page {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    position: relative;
+}
+
+.post-header {
+    margin-top: 20px;
+}
+
+.post-container {
+    background-color: #F0F0F0;
+    flex: 1 1 auto;
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+#post-likes, #post-dislikes {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    transition: 0.1s ease-in;
+}
+
+/* IMAGE SLIDER */
+#image-slider {
+    position: relative;
+    height: 32rem;
+    background-color: dimgray;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    position: relative;
+    margin-top: -10%;
+}
+
+.owl-nav {
+    position: absolute;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.owl-nav button {
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px !important;
+    color: whitesmoke !important;
+    height: 100% !important;
+    width: 5% !important;
+}
+
+.owl-next {
+    right: 0;
+    background-image: linear-gradient(to right, transparent, dimgray) !important;
+}
+
+.owl-prev {
+    left: 0;
+    background-image: linear-gradient(to left, transparent, dimgray) !important;
+}
+
+
+.owl-next:hover {
+    background-image: linear-gradient(to right, transparent, #484848) !important;
+}
+
+.owl-prev:hover {
+    background-image: linear-gradient(to left, transparent, #484848) !important;
+}
+
+
+/* -- Post Description -- */
+.post-desc, .comment-section {
+    margin: 30px 50px;
+    text-align: justify;
+}
+
+#description {
+    white-space: pre-wrap;
+}
+
+.date-posted {
+    font-style: italic;
+}
+
+.tags h6{
+    font-weight: bold;
+}
+
+.tags ul {
+    display: block;
+    padding-left: 0;
+}
+
+.tags li, #add-tag {
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.tags li:hover, #add-tag:hover {
+    background-color: #3B3B3B !important;
+    transition: 0.1s ease-in;
+}
+
+#new-post .tags li:hover {
+    background-color: #AD000A !important;
+    transition: 0.1s ease-in;
+}
+
+.tags li button, #add-tag {
+    color: whitesmoke;
+}
+
+.tags .no-tags{
+    font-style: italic;
+    color: grey;
+}
+
+#add-tag {
+    background-color: #97AA00;
+}
+
+#input-tag-error{
+    color: #AD000A;
+    padding-left: 0;
+}
+
+/* -- COMMENT SECTION -- */
+
+#comment:disabled {
+    cursor: no-drop;
+    background-color: grey !important;
+}
+
+.edit-comment button:hover,
+.edit-btn:hover {
+    font-weight: bold;
+}
+
+.edit-comment .edit-delete:hover {
+    color: #AD000A;
+}
+
+.edit-comment .edit-save:hover {
+    color: #008B02;
+}
+
+#deleted-comment-content {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.comment-section h6 a {
+    font-style: normal;
+    background-color: #97AA00;
+    padding: 2px 10px;
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: normal;
+}
+
+.comment-section h6 a:hover {
+    background-color: #3B3B3B;
+    padding: 2px 10px;
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.comment-section h6, .comment-section .user {
+    font-weight: bold;
+}
+
+.comment-section textarea{
+    position: relative;
+    left: 12px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    background-color: transparent;
+}
+
+.comment-section textarea:focus{
+    outline: none;
+    border-color: dimgray;
+    transition: 0.1s ease-in;
+}
+
+.comment-section .comment-btn,
+.comment-section .reply-submit-btn {
+    color: whitesmoke !important;
+    padding: 5px 10px;
+    margin-top: 8px;
+    border-radius: 30px;
+}
+
+.comment-section .reply-submit-btn {
+    padding: 2px 10px;
+}
+
+.comment-section .comment-btn:hover,
+.comment-section .reply-submit-btn:hover,
+#post-submit:hover, #label-image:hover,
+.update-btn:hover, .tags a:hover {
+    background-color: #3B3B3B !important;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.comment-container, .no-comments {
+    padding-left: 10px;
+    width: 70%;
+}
+
+.no-comments {
+    text-align: center;
+    color: gray;
+}
+
+.no-comments i{
+    font-size: 100px;
+}
+
+.comment-container .user{
+    height: 30px;
+    display: flex;
+}
+
+.comment-container .avatar{
+    height: 30px;
+    width: auto;
+}
+
+
+.comment-container .avatar img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.comment-container .username,
+.comment-container .date {
+    padding-left: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.comment-container .date {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.comment-container .content,
+.comment-container .reply{
+    border-left: 1px solid gray;
+    margin: 5px auto 0 15px;
+    padding-left: 32px;
+}
+
+.comment-container .content .row:first-child {
+    padding-left: 8px;
+}
+
+.comment-container .content p{
+    margin-bottom: 2px;
+}
+
+.comment-container .content button{
+    color: #484848;
+    transition: 0.1s ease-in;
+}
+
+.comment-container .comment-container {
+    margin-top: 10px;
+    margin-left: -12px;
+    padding-left: 0;
+    width: 100%;
+}
+
+.comment-container .reply,
+.comment-container .comment-container .content {
+    margin-left: 22px;
+}
+
+/* -- CREATING A NEW POST -- */
+.create-post-header {
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.new-post h3{
+    font-size: 30px;
+}
+
+.optional {
+    min-height: 80px;
+}
+
+.form-check {
+    margin-left: 10px;
+}
+
+.form-check-label {
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 0;
+}
+
+.form-switch .form-check-input {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.post-price, .post-time {
+    margin-top: 8px;
+}
+
+.post-price i, .post-time i {
+    font-size: 24px;
+}
+
+#image-upload {
+    height: 32rem;
+    background-color: whitesmoke;
+    border: dimgray dashed;
+}
+
+.image-div {
+    display: inline-block;
+    width: fit-content;
+    padding: 0;
+}
+
+.upload-image {
+    position: relative;
+    width: 280px;
+    padding-left: 6px;
+}
+
+#label-image {
+    background-color: #97AA00;
+    color: whitesmoke;
+    font-size: large;
+    padding: 10px 15px;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 18px;
+    margin-left: 6px;
+}
+
+#image-display {
+    width: 98%;
+    max-height: 80%;
+    overflow: auto;
+    margin: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    padding: 0;
+    margin: 5px;
+    line-height: 180px;
+    text-align: center;
+    font-size: 54px;
+    border: 1px dashed dimgray;
+    overflow: hidden;
+}
+
+.image-container img {
+    height: 110%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-container:hover img{
+    opacity: 0.3;
+}
+
+.image-container:hover .delete-img {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.image-container .delete-img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    opacity: 0;
+}
+
+.post-desc textarea {
+    width: 100%;
+    padding: 5px 10px;
+    white-space: pre-wrap;
+}
+
+
+#post-submit {
+    padding: 3px 50px;
+    background-color: #97AA00;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+
+#post-submit:disabled,
+#post-submit:disabled:hover {
+    background-color: grey !important;
+    cursor: no-drop;
+}
+
+.break {
+    height: 20px;
+    width: 100%;
+}
+
+.update-btn {
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Kanit', sans-serif;
+    padding: 3px 50px;
+}
+
+#edit-cancel, #delete-cancel {
+    color: whitesmoke;
+    background-color: gray;
+}
+
+#edit-delete, #delete-confirm {
+    color: whitesmoke;
+    background-color: #AD000A;
+}
+
+@media screen and (max-width: 1200px) {
+    #image-slider {
+        height: 24rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #image-slider {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #image-slider {
+        height: 12rem;
+    }
+}

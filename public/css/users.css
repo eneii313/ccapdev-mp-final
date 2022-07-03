@@ -1,0 +1,390 @@
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #3B3B3B;
+    position: relative;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    position: relative;
+}
+
+.profile {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    width: 80%;
+    padding: 5px;
+}
+
+.user-details {
+    border-right: 1px solid dimgray;
+}
+
+.user-details .username {
+    margin: 10px auto;
+    padding: 5px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+.user-details .row-auto {
+    text-align: center;
+}
+
+.avatar {
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    margin: auto;
+}
+
+.user-desc {
+    padding-left: 30px;
+}
+
+.user-desc h6{
+    font-weight: bold;
+}
+
+.user-desc p {
+    margin-bottom: 0;
+}
+
+#edit-account, #save-account,
+#label-avatar, #new-post {
+    background-color: #578E87;
+    color: whitesmoke;
+}
+
+#save-account {
+    margin-right: 30px;
+}
+
+#cancel {
+    color: whitesmoke;
+    background-color: gray;
+}
+
+#edit-account, #new-post {
+    border-radius: 3px;
+    padding: 3px 10px;
+    text-decoration: none;
+}
+
+#save-account, #label-avatar,
+#delete, #cancel, #delete-confirm {
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-left: -8px;
+    text-decoration: none;
+}
+
+#edit-account:hover, #save-account:hover,
+#label-avatar:hover, #delete:hover,
+#cancel:hover, #delete-confirm:hover,
+#new-post:hover {
+    background-color: #484848;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.posts-by {
+    margin-top: 20px;
+}
+
+/* -- POSTS -- */
+
+.posts {
+    padding-bottom: 30px;
+}
+
+.break {
+    height: 30px;
+}
+
+#must-eats, .post-container .fa-cutlery,
+.post-must-eats .post-counts {
+    color: #1C4508;
+}
+
+#must-visits, .post-container .fa-map-marker,
+.post-must-visits .post-counts {
+    color: #578E87;
+}
+
+#must-dos, .post-container .fa-ticket,
+.post-must-dos .post-counts {
+    color: #97AA00;
+}
+
+.post-details h2 {
+    margin: auto;
+}
+
+.post-likes, .post-dislikes,
+.post-comments {
+    font-size: 20px;
+    margin: auto;
+}
+
+.post-comment-container {
+    position: relative;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-top: 1px solid grey;
+    height: auto;
+}
+
+.post-container {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.post-details {
+    margin: 10px 0;
+}
+
+.post-details .sub-details {
+    margin-left: 24px;
+}
+
+.post-details h2 {
+    font-weight: bold;
+}
+
+.post-details a,
+.comment-container a {
+    text-decoration: none !important;
+    color: #3B3B3B;
+}
+
+.post-details a:hover,
+.comment-container a:hover {
+    text-shadow: none !important;
+    text-decoration: underline !important;
+}
+
+.post-desc {
+    text-align: justify;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0), grey);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.post-image img {
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover img {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover .overlay {
+    opacity: 0.4;
+}
+
+.no-posts, .no-comments {
+    position: relative;
+    top: 40%;
+    text-align: center;
+    color: gray;
+}
+
+.no-posts i, .no-comments i{
+    font-size: 72px;
+}
+
+.comments {
+    padding-bottom: 30px;
+}
+
+.comment-container {
+    margin-top: 20px;
+    border: 1px solid #3B3B3B;
+    padding: 10px 20px;
+}
+
+.comment-container .post-title {
+    font-weight: bold;
+}
+
+.comment-container .content {
+    border-left: 1px solid gray;
+    margin-left: 2px;
+}
+
+.comment-container .numbers {
+    color: dimgray;
+    font-style: italic;
+    width: fit-content;
+}
+
+.posts-by button {
+    background-color: #578E87;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.posts-by button:hover {
+    background-color: #484848;
+    transition: 0.1s ease-in;
+}
+
+.post-container .fa-map-marker {
+    color: #578E87;
+}
+
+.post-container .fa-cutlery {
+    color: #1C4508;
+}
+
+.post-container .fa-ticket {
+    color: #97AA00;
+}
+
+/* -- For Edit Profile -- */
+
+.edit-account h1 {
+    margin-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#delete, #delete-confirm {
+    background-color: #AD000A;
+    color: whitesmoke;
+}
+
+.user-desc label {
+    padding-left: 0;
+}
+
+/* #password-settings {
+    display: none;
+} */
+
+textarea, span.row {
+    white-space: pre-wrap;
+}
+
+#verify-password input[type=password] {
+    width: 90%;
+}
+
+#verify-password label {
+    padding-left: 0;
+}
+
+#delete-confirm:disabled {
+    background-color: grey;
+    cursor: no-drop;
+}
+
+#error-password, #error-confirm-password {
+    color: #AD0000;
+    font-size: 14px;
+    margin: 0;
+}
+
+.no-desc {
+    padding-left: 0;
+    font-style: italic;
+}
+
+/* -- For Account Creation -- */
+
+#welcome {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../images/ek-swings.jpg");
+    text-align: center;
+    color: whitesmoke;
+}
+
+#welcome h1{
+    padding-top: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+#welcome h5 {
+    padding-bottom: 20px;
+}
+
+#welcome h1 img {
+    width: 26%;
+    height: 75%;
+    margin-bottom: 8px;
+}
+
+#welcome-overlay {
+    position: relative;
+    background: #3B3B3BCD;
+    width: 100%;
+}
+
+#edit-desc{
+    margin-left: 2px;
+}
+
+#edit-desc textarea {
+    font-size: inherit;
+    color: inherit;
+}
+
+#upload-avatar {
+    position: relative;
+    z-index: -1;
+    display: none;
+}
+
+#label-avatar {
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+.img-error {
+    font-size: 16px;
+    color: #AD0000;
+    font-size: 16px;
+    margin: 0 50px;
+    text-align: center;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}

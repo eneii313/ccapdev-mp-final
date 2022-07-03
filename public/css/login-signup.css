@@ -1,0 +1,86 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    min-height: 100%;
+}
+
+#login-page {
+    background-image: url("../images/coconut_festival.jpg");
+}
+
+#sign-up-page {
+    background-image: url("../images/hulugan_falls.jpg");
+}
+
+.overlay {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(22, 22, 22, 0.5));
+    height: inherit;
+    width: inherit;
+}
+
+#form-login {
+    position: relative;
+    top: 30px;
+    padding: 15px 20px 25px;
+    max-width: 50%;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.9);
+    line-height: 30px;
+}
+
+#form-login h2 {
+    padding: 0 10%;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+
+#form-login h6 {
+    text-align: center;
+}
+
+#form-login label, .error {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#form-login .btn {
+    background-color: #97AA00;
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 100%;
+}
+
+#form-login .btn:hover {
+    background-color: #1C4508;
+    box-shadow: 0 0 5px grey;
+    color: whitesmoke;
+}
+
+.img-source, .img-source:hover {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgb(64, 64, 64);
+    text-shadow: 0 0 5px whitesmoke;
+    text-align: right;
+    text-decoration: none;
+}
+
+.error {
+    font-size: 16px;
+    color: #AD0000;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+label {
+    padding-left: 16px !important;
+}
+
+#sign-up-submit:disabled,
+#login-submit:disabled {
+    background-color: grey;
+}

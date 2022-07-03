@@ -1,0 +1,35 @@
+<div class="comment-container">
+    <div class="user row">
+        <div class="col-auto avatar">
+            <img class="avatar" src="{{cProfilePic}}">
+        </div>
+        <span class="col-auto username"><a href="/users/{{cAuthor}}">{{cAuthor}}</a></span>
+        <h6 class="col-auto date">{{trimDate cDate "MMMM DD, YYYY"}}{{#if isEdited}} (edited){{/if}}</h6>
+    </div>
+    <div class="content">
+        <p class="row comment-description">{{cDescription}}</p>
+
+        <form class="edit-comment" action="/editComment" method="POST" hidden="true">
+            <input type="hidden" name="cId" value="{{this._id}}">
+            <textarea class="row" rows="1" cols="90" class="updateComment" name="cDescription">{{cDescription}}</textarea>
+            <div class="row justify-content-start">
+                <button class="col-auto edit-cancel" type="button"><i class="fa fa-times"></i> Cancel</button>
+                <button class="col-auto edit-save" type="button"><i class="fa fa-check"></i> Save</button>
+                <button class="col-auto edit-delete" type="button" data-bs-toggle="modal" data-bs-target="#delete-modal"><i class="fa fa-trash-o"></i> Delete</button>
+                <span class="comment-id" hidden="true">{{this._id}}</span>
+            </div>
+
+        </form>
+
+        <div class="row comment-options">
+            <button class="col-auto comment-likes" title="Like">
+                <i class="fa fa-thumbs-up"></i> <span class="comment-likes-count">{{cLikes.length}}</span></button>
+            <span class="comment-id" hidden="true">{{this._id}}</span>
+            {{#isloggedUser cloggedUser cAuthor}}
+                <button class="col-auto edit-btn"><i class="fa fa-pencil-square-o"></i> Edit</button>
+            {{/isloggedUser}}
+        </div>
+    </div>
+    
+    <br/>
+</div>

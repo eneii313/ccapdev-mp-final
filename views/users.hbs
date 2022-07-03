@@ -1,0 +1,104 @@
+ {{#section 'localCSS'}}
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/users.css">
+{{/section}}
+ 
+ 
+ <div class="position-relative page">
+    <div class="col container-fluid adjust-height">
+        <div class="row container-fluid profile">
+            
+            <div class="col-4 user-details">
+                <img class="row avatar" src='..{{user.profilePic}}'>
+                <h3 class="row-auto username" id="username-full">{{user.username}}</h3>
+                {{#if loggedUser}}
+                <h6 class="row-auto email">{{user.email}}</h6>
+                {{/if}}
+                <h6 class="row-auto">Joined on <span class="join-date">{{trimDate user.dateJoined "MMMM DD, YYYY"}}</span></h6>
+
+                {{#if loggedUser}}
+                <div class="row-auto">
+                    <a id="edit-account" href="/users/{{user.username}}/settings"><i class="fa fa-cog"></i> Account Settings</a>
+                </div>
+                {{/if}}
+                
+            </div>
+            
+            <div class="col-6 my-auto user-desc">
+                <h6 class="row">Description:</h6>
+                <span class="row">{{#if noDesc}}<span class="no-desc">{{user.username}} has not added a description.</span>{{else}}{{user.description}}{{/if}}
+                </span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="break"></div>
+
+    <div class="post-comment-container">
+        <div class="posts">
+
+            <div class="row container posts-by">
+                <h4 class="col-auto my-auto"><i class="fa fa-pencil"></i> Posts by <span class="username">{{user.username}}</span></h4>
+                {{#if loggedUser}}
+                <a id="new-post" class="col-auto" href="/users/{{user.username}}/create-post">Create New Post</a>
+                {{/if}}
+            </div>
+
+            {{#if posts}}
+                {{#each posts}}
+                    {{> post-card}}
+                {{/each}}
+
+            {{else}}
+                <div class="col container-fluid no-posts">
+                    <div class="row">
+                        <h1><i class="fa fa-pencil"></i></h1>
+                    </div>
+                    <div class="row">
+                        <h5>Looks like <span class="no-posts-profile">{{user.username}}</span> has not posted yet.</h6>
+                    </div>
+                </div>
+            {{/if}}
+            
+        </div>
+        
+        <div class="container">
+            <hr style="background-color:#3B3B3B; margin-top: 0; height: 2px;">
+        </div>
+
+
+        <div class="comments">
+
+            <div class="row container posts-by">
+                <h4><i class="fa fa-comments"></i> Comments by <span class="username">{{user.username}}</span></h4>
+            </div>
+
+            {{#if comments}}
+                {{#each comments}}
+                    {{> user-comment-card}}
+                {{/each}}
+            {{else}}
+            <div class="col container-fluid no-comments">
+                <div class="row">
+                    <h1><i class="fa fa-comments"></i></h1>
+                </div>
+                <div class="row">
+                    <h5>Looks like <span class="no-posts-profile"></span> has not commented yet.</h6>
+                </div>
+            </div>
+            {{/if}}
+
+        </div>
+
+    </div>
+</div>
+
+{{#section 'JS'}}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="/js/nav-bar.js"></script>
+    <script type="text/javascript" src="/js/users.js"></script>
+{{/section}}

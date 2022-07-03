@@ -1,0 +1,40 @@
+{{#section 'localCSS'}}
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/categories.css">
+{{/section}}
+
+<div class="position-relative page">
+    <div class="row container-fluid justify-content-between adjust-height">
+        <h1 class="col-12 category-name" class="explore"><i class="fa fa-search"></i> Search results for: "{{term}}"</h1>
+    </div>
+
+    <div class="posts">
+
+        {{#if posts}}
+            {{#each posts}}
+                {{> post-card}}
+            {{/each}}
+        {{else}}
+        <div class="col container-fluid no-results">
+            <div class="row">
+                <h1><i class="fa fa-search"></i></h1>
+            </div>
+            <div class="row">
+                <h4>Looks like there's no results for "<span class="search-query">{{term}}</span>".</h4>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+    
+</div>
+
+{{#section 'JS'}}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Owl Carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Local JS -->
+    <script type="text/javascript" src="/js/nav-bar.js"></script>
+    <script type="text/javascript" src="/js/search.js"></script>
+{{/section}}

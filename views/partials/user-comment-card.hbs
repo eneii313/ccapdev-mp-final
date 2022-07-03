@@ -1,0 +1,12 @@
+<div class="comment-container container col">
+    <div class="row">
+        <h6 class="post-title">Comment on <a href="/categories/{{cPostCategory}}/view/{{cPostId}}">{{cPostTitle}}</a>
+            on <span class="comment-date">{{trimDate cDate "MMMM DD, YYYY"}}</span> </h6>
+    </div>
+    <div class="row content">
+        <h6>{{cDescription}}</h6>
+        <h6 class="row numbers">
+            <span class="col comment-likes-count">{{cLikes.length}}</span> Likes
+        </h6>
+    </div>
+</div>

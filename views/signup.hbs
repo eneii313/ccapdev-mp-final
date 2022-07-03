@@ -1,0 +1,64 @@
+{{#section 'localCSS'}}
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login-signup.css">
+{{/section}}
+
+<div class="overlay">
+
+<div class="container-fluid d-flex adjust-height position-relative" id="form-parent">
+        <form id="form-login" class="mx-auto hidden" action="/signup" method="POST">
+        <h2>Sign up and join the DiscoverLAGUNA community today!</h2>
+        <hr>
+
+        <div class="form-group mb-4">
+            <div class="row">
+                <label class="col col-md-auto" for="sign-up-email">E-mail</label>
+                <p id="error-sign-up-email" class="col error"></p>
+            </div>
+            <input type="text" class="form-control form-control-lg" id="sign-up-email" name="email" placeholder="Enter e-mail address">
+        </div>
+
+        <div class="form-group mb-4">
+            <div class="row">
+                <label class="col col-md-auto" for="sign-up-username">Username</label>
+                <p id="error-sign-up-username" class="col error"></p>
+            </div>
+            <input type="text" class="form-control form-control-lg" id="sign-up-username" name="username" placeholder="Enter username">
+        </div>
+
+        <div class="row">
+            <div class="col-6 form-group mb-4">
+                <div class="row">
+                    <label class="col col-md-auto" for="sign-up-password">Password</label>
+                    <p id="error-sign-up-password" class="col error"></p>
+                </div>
+                <input type="password" class="form-control form-control-lg" id="sign-up-password" name="password" placeholder="Enter password">
+            </div>
+
+            <div class="col-6 form-group mb-4">
+                <div class="row">
+                    <label class="col col-md-auto" for="sign-up-confirm">Confirm</label>
+                    <p id="error-sign-up-confirm" class="col error"></p>
+                </div>
+                <input type="password" class="form-control form-control-lg" id="sign-up-confirm" name="confirmPass" placeholder="Confirm password">
+            </div>
+        </div>
+        
+        <button type="submit" id="sign-up-submit" class="btn btn-lg" disabled="true">SIGN UP</button>
+        <br/><br/>
+            
+        <h6 class="lead">Already have an account? <a href="/login">Login</a></h6>
+    </form>
+</div>
+<a class="position-absolute bottom-0 end-0 img-source" href="https://rediscover.ph/2016/06/hulugan-falls/">
+    Hulugan Falls, Luisiana<br/>Original Photo</a>
+</div>
+
+{{#section 'JS'}}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+    <script type="text/javascript" src="js/nav-bar.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+{{/section}}

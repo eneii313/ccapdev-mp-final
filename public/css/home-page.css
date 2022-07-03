@@ -1,0 +1,284 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #3B3B3B;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.break {
+    height: 40px;
+}
+
+.container .break {
+    height: 54px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+#welcome {
+    height: 32rem;
+    background-image: url("../images/pandin_lake_laguna.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(22, 22, 22, 0.5));
+    height: inherit;
+    width: inherit;
+}
+
+#title {
+    text-align: center;
+    font-size: 86px;
+    font-family: 'Square Peg', cursive;
+    color: whitesmoke;
+    margin-bottom: 0;
+    text-shadow: 0 0 15px #1C4508;
+    position: relative;
+    z-index: 3;
+}
+
+#subtitle{
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    margin: -8px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-content: center;
+    background-color: #578E87;
+    color: whitesmoke;
+    text-transform: lowercase;
+}
+
+.img-source, .img-source:hover {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color:  rgb(100, 100, 100);
+    text-shadow: 0 0 10px whitesmoke;
+    text-align: right;
+    text-decoration: none;
+}
+
+.must-header, .must-header:hover {
+    padding-top: 16px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+}
+
+h3 a, h3 a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+
+.must-btn {
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5%;
+    width: fit-content;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.must-btn:hover {
+    background-color: #E2E2E2 !important;
+    color: #1C4508 !important;
+    transition: 0.2s ease-in;
+}
+
+.desc {
+    text-align: center;
+    padding: 0 14px;
+}
+
+.post-container {
+    height: 300px;
+    margin:0 10px;
+    text-decoration: none;
+}
+
+#must-visits-carousel .post-container {
+    background-color: #578E87;
+}
+
+#must-eats-carousel .post-container {
+    background-color: #1C4508;
+}
+
+#must-dos-carousel .post-container {
+    background-color: #97AA00;
+}
+
+.post-container a{
+    text-decoration: none;
+    text-shadow: none;
+    color: whitesmoke;
+}
+
+.content {
+    margin: 0 10px;
+}
+
+.content .post-title,
+.content .post-loc {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content .post-title,
+.content .post-form {
+    margin-top: 2%;
+}
+
+.content .post-title {
+    font-size: 30px;
+}
+
+.content .post-loc {
+    height: 40px;
+}
+
+.post-title:hover,
+.post-loc:hover{
+    text-decoration: underline;
+}
+
+.post-title {
+    font-family: 'Kanit', sans-serif;
+}
+
+.post-likes {
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    height: 30px;
+    padding: 2px 10px;
+}
+
+.post-form {
+    padding:0;
+}
+
+#must-visits-carousel .post-likes {
+    color: #578E87;
+}
+
+#must-eats-carousel .post-likes {
+    color: #1C4508;
+}
+
+#must-dos-carousel .post-likes {
+    color: #97AA00;
+}
+
+.post-likes:hover, .owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    background-color: #E2E2E2 !important;
+    transition: 0.2s ease-in !important;
+}
+
+.post-likes:hover {
+    cursor: pointer;
+}
+
+.owl-prev.disabled, .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+	position: absolute;
+	top: 40%;
+	font-size: 26px !important;
+	margin: auto !important;
+
+    border-radius: 50%;
+    background-color: whitesmoke !important;
+    width: 40px;
+    height: 40px;
+}
+
+#must-visits-carousel .owl-nav .owl-prev,
+#must-visits-carousel .owl-nav .owl-next {
+    color: #578E87 !important;
+    border: 2px solid #578E87 !important;
+}
+
+#must-eats-carousel .owl-nav .owl-prev,
+#must-eats-carousel .owl-nav .owl-next {
+    color: #1C4508 !important;
+    border: 2px solid #1C4508 !important;
+}
+
+#must-dos-carousel .owl-nav .owl-prev,
+#must-dos-carousel .owl-nav .owl-next {
+    color: #97AA00 !important;
+    border: 2px solid #97AA00 !important;
+}
+
+.owl-nav .owl-prev {
+	left: 0;
+}
+
+.owl-nav .owl-next {
+	right: 0;
+}
+
+.post .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0), grey);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    height: 190px;
+}
+
+.post-image img {
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover img {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.post-image:hover .overlay {
+    opacity: 0.4;
+}

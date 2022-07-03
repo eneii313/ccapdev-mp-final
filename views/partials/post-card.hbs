@@ -1,0 +1,43 @@
+<div class="post-container container col"> 
+    <span class="post-category" hidden="true">{{postCategory}}</span>
+    <div class="post row">
+        <div class="col-3 post-image">
+                <a href="/categories/{{postCategory}}/view/{{this._id}}">
+                    <img src="{{postImages.[0]}}">
+                    <div class="overlay"></div>    
+                </a>
+        </div>
+
+        <div class="post-details col-9">
+            <div class="row">
+                <h2 class="col-9 post-title"> <a href="/categories/{{postCategory}}/view/{{this._id}}">{{postTitle}}</a></h2>
+                    <div class="col-3 post-counts">
+                        <div class="row">
+                            <p class="col-auto post-icons post-likes"><i class="fa fa-thumbs-up"></i> <span class="post-likes-count">{{postLikes.length}}</span></h2>
+                            <p class="col-auto post-icons post-comments"><i class="fa fa-comment"></i> <span class="post-comments-count">{{postComments.length}}</span></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row sub-details">
+                <h5 class="col-auto"><i class="fa fa-compass"></i> <a href="/explore/{{postLocation}}">{{getLocName postLocation}}</a></h5>
+
+                {{#if postPricing.minPrice}}
+                <h5 class="col-auto" style="border-left: 1px solid grey"><i>&#8369;</i> {{postPricing.minPrice}}{{#if postPricing.maxPrice}}-{{postPricing.maxPrice}}{{/if}}</h5>
+                {{/if}}
+
+                {{#if postTime.startTime}}
+                <h5 class="col-auto" style="border-left: 1px solid grey"><i class="fa fa-clock-o"></i> {{postTime.startTime}}{{#if postTime.endTime}}-{{postTime.endTime}}{{/if}}</h5>
+                {{/if}}
+            </div>
+            <div class="row sub-details">
+                <h6 class="col-auto"><i class="fa fa-pencil"></i> Posted by <a href="/users/{{postAuthor}}">{{postAuthor}}</a>
+                    on <span class="date-uploaded">{{trimDate postDate "MMMM DD, YYYY"}}</span></h6>
+            </div>
+            <hr style="background-color:#578E87; margin-top: 0;">
+            <div class="row container-fluid post-desc">
+                <p>{{trimDesc postDescription}}</p>
+            </div>
+        </div>
+        
+    </div>
+</div>

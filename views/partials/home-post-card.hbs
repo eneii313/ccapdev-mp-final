@@ -1,0 +1,25 @@
+<div class="post-container col">
+    <div class="post">
+        <div class="post-image">
+            <a href="/categories/{{this.postCategory}}/view/{{this._id}}">
+                <img src="{{this.postImages.[0]}}">
+                <div class="overlay"></div>
+            </a>
+        </div>
+
+        <div class="row content">
+            <h4 class="col d-flex post-title"><a class="align-self-center" href="/categories/{{this.postCategory}}/view/{{this._id}}">
+                {{this.postTitle}}</a></h4>
+
+            <form class="post-form col-auto align-self-center" action="/like-post" method="POST">
+                <input type="hidden" class="post-id" name="postId" value="{{this._id}}"></input>
+                <button class="post-likes" type="submit"><i class="fa fa-thumbs-up"></i>
+                    <span class="post-likes-count">{{this.postLikes.length}}</span></a>
+            </form>
+        </div>
+        <div class="row content">
+            <p class="col-auto d-flex post-loc"><a class="align-self-center" href="/explore/{{this.postLocation}}">{{getLocName this.postLocation}}</a></p>
+        </div>
+        
+    </div>
+</div>
