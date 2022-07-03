@@ -22,4 +22,5 @@ Upon logging in, the user can start posting and commenting. Users stay logged in
 + Each registered user has their own page which shows their profile publicly. On the same page, a visitor may see the user’s username, avatar and short description. They can also see the user’s posts and comments, which are sorted by the most recent.
 + A logged in user can create, update, and delete their own posts and comments. They can also like a post or a comment (including their own) once.
 + A logged in user can update their profile picture and description.
++ A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
