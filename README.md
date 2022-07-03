@@ -25,10 +25,34 @@ Upon logging in, the user can start posting and commenting. Users stay logged in
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
 ## Sample Accounts
-<code>
-Account 1:
-	Username: anneKulit
-	Password: pass1234
+```text
+Account 1: 
+	Username: anneKulit 
+	Password: pass1234 
 	Email: annekulit02@gmail.com
-</code>
+```
+```text
+Account 2:
+	Username: hot-springs-enjoyer
+	Password: 102499
+	Email: cdsantos@gmail.com
+```
+```text
+Account 3:
+	Username: StephanieFlores
+	Password: 67At1n2*
+	Email: steph.flores@yahoo.com
+```
+```text
+Account 4:
+	Username: luckyboi
+	Password: star999
+	Email: luckyboi99@gmail.com
+```
+```text
+Account 5:
+	username: Juanted
+	Password: #4efr9K
+	Email: juan.villamayor@email.com
+```
 
