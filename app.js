@@ -24,6 +24,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 //connect to Mongo
+require('dotenv').config();
 db.connect();
 
 // Express Session

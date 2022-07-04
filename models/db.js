@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const User = require('../models/users');
 
 // DiscoverLAGUNA is the name of the database
-const url = 'mongodb://localhost:27017/DiscoverLAGUNA';
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/DiscoverLAGUNA';
 
 // additional connection options
 const options = {
