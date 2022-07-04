@@ -20,6 +20,9 @@
 </div>
 
 <!-- Must-Visits -->
+{{#each posts.mustVisits}}
+    <h3>{{this.postTitle}}</h3>
+{{/each}}
 <div class ="break"></div> 
 <div id="must-visits" class="container section">
     <div class="row">
@@ -43,7 +46,7 @@
                 <div id="must-visits-carousel" class="owl-carousel">
                 
                 {{#each posts.mustVisits}}
-                    {{> home-post-card}} {{post.mustVisits.postTitle}}
+                    {{> home-post-card}}
                 {{/each}}
 
                 </div>
