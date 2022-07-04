@@ -79,7 +79,7 @@ const loginController = {
                 }
     
                 else {
-                    res.render('error',  {error: "User " + username + " doesn't exist."});
+                    console.log("Error in finding username: " + username);
                 }
          
             });
@@ -232,7 +232,6 @@ const loginController = {
         db.findOne(User, {username: username}, '', function(result){
 
             if (result){
-                var errors = {};
 
                 passport.authenticate('local', function(err, user, info) {
                     //failureRedirect

@@ -68,6 +68,17 @@ const controller = {
 
     },
 
+    // About Page
+    getAboutPage: function(req, res) {
+
+        var params = {
+            displayFooter : true,
+        }
+
+        res.render('about', params);
+
+    },
+
     // Login Page
     // If a user is already logged in, redirect to home page
     getLoginPage: function(req, res) {
@@ -314,40 +325,43 @@ const controller = {
     // GET request '/search'
     getSearch: function(req, res) {
 
-        const term = req.query.term.trim();
+        if (req.query.term != null) {
+            const term = req.query.term.trim();
 
-        if (term.length == 0) {
-            res.redirect('/');
-        }
-
-        else {
-            var params = {
-                loggedIn: res.locals.loggedIn,
-                displayFooter: false,
-                term: term
+            if (term.length == 0) {
+                res.redirect('/');
             }
-            
-            var regex = new RegExp('.*'+term+'.*', 'i'); //exact term in the string
-
-            // default: latest upload
-            Post.find({$or:[
-                {postTitle: {$regex: regex}},
-                {postTags: {$regex: regex}}
-            ]}).sort({postDate: -1}).exec((err, posts) => {
-                if (err) console.log(err);
     
-                var postArray = [];
+            else {
+                var params = {
+                    loggedIn: res.locals.loggedIn,
+                    displayFooter: false,
+                    term: term
+                }
+                
+                var regex = new RegExp('.*'+term+'.*', 'i'); //exact term in the string
     
-                posts.forEach(function(post){
-                    postArray.push(post.toObject());
-                    
-                })
-    
-                params.posts = postArray;
-                res.render('search', params);
-    
-            });
+                // default: latest upload
+                Post.find({$or:[
+                    {postTitle: {$regex: regex}},
+                    {postTags: {$regex: regex}}
+                ]}).sort({postDate: -1}).exec((err, posts) => {
+                    if (err) console.log(err);
+        
+                    var postArray = [];
+        
+                    posts.forEach(function(post){
+                        postArray.push(post.toObject());
+                        
+                    })
+        
+                    params.posts = postArray;
+                    res.render('search', params);
+        
+                });
+            }
         }
+        else res.render('error', {error: "Search term not provided"});
     }
 
 }

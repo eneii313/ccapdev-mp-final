@@ -11,11 +11,14 @@ const signupController = {
     getCheckEmail: function(req, res){
         var email = req.query.email;
 
-        db.findOne(User, {email: email}, '', function(result){
-            if(result)
-                res.send(result);
-            else res.render('error');
-        });
+        if (email != null) {
+            db.findOne(User, {email: email}, '', function(result){
+                if(result)
+                    res.send(result);
+                else res.send(false);
+            });
+        } else res.render('error');
+
     },
 
     // Check if the username already exists
@@ -23,11 +26,13 @@ const signupController = {
     getCheckUsername: function (req, res) {
         var username = req.query.username;
 
-        db.findOne(User, {username: username}, '', function(result){
-            if (result)
-                res.send(result);
-            else res.render('error');
-        });
+        if (username != null) {
+            db.findOne(User, {username: username}, '', function(result){
+                if (result)
+                    res.send(result);
+                else res.send(false);
+            });
+        }  else res.render('error');
    },
 
    // adds the user into the database
@@ -65,7 +70,7 @@ const signupController = {
                                 return res.redirect('/success?username=' + newUser.username);
                             })
                         }
-                        else res.render('error',  {error: "CANNOT FIND USER"});
+                        else console.log("Error in finding user");
                  
                     });     
                 }
@@ -102,7 +107,7 @@ const signupController = {
                         return res.render('success', params);
                     })
                 }
-                else res.render('error',  {error: "CANNOT FIND USER"});
+                else console.log("Error in finding user");
          
             });
         }

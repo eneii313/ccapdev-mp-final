@@ -35,6 +35,9 @@ app.get('/categories/:category/view/:postId', controller.getPost);
 // SEARCH
 app.get('/search', controller.getSearch);
 
+// ABOUT
+app.get('/about', controller.getAboutPage);
+
 /* -- VALIDATION -- */
 
 // REGISTRATION FORM VALIDATION

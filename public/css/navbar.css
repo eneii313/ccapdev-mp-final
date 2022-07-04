@@ -120,20 +120,22 @@ footer {
     height: 50px;
 }
 
-.to-top {
+.to-top, .about {
     color: whitesmoke;
     text-decoration: none;
     text-align: center;
-    position: absolute;
     top: 10px;
-    left: 50%;
 }
 
-.to-top:hover {
+.to-top:hover, .about:hover {
     cursor: pointer;
     text-decoration: underline;
     text-shadow: none;
     color: whitesmoke;
+}
+
+#footer-container {
+    margin-top: 12px;
 }
 
 #user-pic {
