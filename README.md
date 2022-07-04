@@ -31,7 +31,7 @@ Click [DiscoverLAGUNA](https://discoverlaguna.herokuapp.com/) to see the deploye
 Local Version
 1. Run Command Prompt
 2. Go to the project file directory, then run the command 'npm install'
-3 Run the command 'node app.js', then go to the indicated post of your local host server.
+3. Run the command 'node app.js', then go to the indicated post of your local host server.
 
 ## Sample Accounts
 ```text
