@@ -34,52 +34,46 @@ const controller = {
                 {$limit: 5}
             ], function(err, result) {
                 if(err) return callback(false);
-                console.log("inside findTop 5" + category);
                 return callback(result);
             })
         }
 
-        let findPosts = async function() {
-            await Promise.all([
-                // Must-Visits
-                findTop5("must-visits", function(result) {
-                    if(result){
-                        for (var i = 0; i < result.length; i++)
-                            posts.mustVisits.push(result[i]);
-    
-                        console.log("Fetching must visits..." + posts.mustVisits.length);
-                        return true;
-                    }
-                }),
-    
-                // Must-Eats
-                findTop5("must-eats", function(result) {
-                    if(result){
-                        for (var i = 0; i < result.length; i++)
-                            posts.mustEats.push(result[i]);
-                        console.log("Fetching must eats..." + posts.mustEats.length);
-                        return true;
-                    }
-                }),
-    
-                // Must-Dos
-                findTop5("must-dos", function(result) {
-                    if(result){
-                        for (var i = 0; i < result.length; i++)
-                            posts.mustDos.push(result[i]);
-                            console.log("Fetching must dos..." + posts.mustDos.length);
-                        return true;
-                    }
-                }),
-            ])
-        }
-        
-        await findPosts();
+        // Must-Visits
+        await findTop5("must-visits", function(result) {
+            if(result){
+                for (var i = 0; i < result.length; i++)
+                    posts.mustVisits.push(result[i]);
+                console.log("In must visits");
+            }
+        })
+
+
+         // Must-Eats
+        await findTop5("must-eats", function(result) {
+            if(result){
+                for (var i = 0; i < result.length; i++)
+                    posts.mustEats.push(result[i]);
+                console.log("In must eats");
+            }
+        })
+
+        // Must-Dos
+        await findTop5("must-dos", function(result) {
+            if(result){
+                for (var i = 0; i < result.length; i++)
+                    posts.mustDos.push(result[i]);
+                console.log("In must dos");
+            }
+        })
+
+        await findTop5("filler", function(result) {
+            if (result) console.log("--------");
+        })
 
         params.posts = posts;
         console.log("Rendering home page...");
         res.render('home', params);
-
+        
     },
 
     // About Page
