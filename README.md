@@ -26,7 +26,7 @@ Users can also include tags in their posts so that it can be easier to be search
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
 ## How To Run
-Click //DiscoverLAGUNA to see the deployed web application in Heroku.
+Click [DiscoverLAGUNA](https://discoverlaguna.herokuapp.com/) to see the deployed web application in Heroku.
 
 ## Sample Accounts
 ```text
