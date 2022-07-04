@@ -24,3 +24,63 @@ Upon logging in, the user can start posting and commenting. Users stay logged in
 + A logged in user can update their profile picture and description.
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
+## How To Run
+Click //DiscoverLAGUNA to see the deployed web application in Heroku.
+
+## Sample Accounts
+```text
+Account 1: 
+	Username: anneKulit 
+	Password: pass1234 
+	Email: annekulit02@gmail.com
+```
+```text
+Account 2:
+	Username: hot-springs-enjoyer
+	Password: 102499
+	Email: cdsantos@gmail.com
+```
+```text
+Account 3:
+	Username: StephanieFlores
+	Password: 67At1n2*
+	Email: steph.flores@yahoo.com
+```
+```text
+Account 4:
+	Username: luckyboi
+	Password: star999
+	Email: luckyboi99@gmail.com
+```
+```text
+Account 5:
+	username: Juanted
+	Password: #4efr9K
+	Email: juan.villamayor@email.com
+```
+
+## NPM Packages and Third Party Libraries
++ bcrypt 5.0.1
++ bcryptjs 2.4.3
++ connect-flash 0.1.1
++ cookie-parser 1.4.6
++ dotenv 16.0.1
++ express 4.18.1
++ express-fileupload 1.4.0
++ express-handlebars 6.0.6
++ express-session 1.17.3
++ hbs 4.2.0
++ moment 2.29.3
++ mongoose 6.4.0
++ node-cache 5.1.2
++ passport 0.6.0
++ passport-local 1.0.0
+
++ bootstrap-css 5.1.3
++ bootstrap-js 5.1.3
++ font-awesome 4.7.0
++ owl-carousel-css 2.3.4
++ owl-carousel-js 2.3.4
++ animate-css 4.1.1
++ jquery 3.6.0
++ popper 1.12.9
