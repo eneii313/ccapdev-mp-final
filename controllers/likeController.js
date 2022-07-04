@@ -118,7 +118,6 @@ const likeController = {
             }
         })
 
-        res.render('error');
     }
 }
 
