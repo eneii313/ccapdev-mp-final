@@ -24,6 +24,7 @@ const controller = {
             mustDos: []
         }
 
+        console.clear();
 
         async function findTop5(category, callback){
             await Post.aggregate([
@@ -33,39 +34,42 @@ const controller = {
                 {$limit: 5}
             ], function(err, result) {
                 if(err) return callback(false);
+                console.log("inside findTop 5" + category);
                 return callback(result);
             })
         }
 
-        // Must-Dos
-        await findTop5("must-dos", function(result) {
-            if(result){
-                for (var i = 0; i < result.length; i++)
-                    posts.mustDos.push(result[i]);
-                    console.log("Fetching must dos..." + posts.mustDos.length);
-            }
-        })
+        await Promise.all([
+            // Must-Visits
+            findTop5("must-visits", function(result) {
+                if(result){
 
-        // Must-Visits
-        await findTop5("must-visits", function(result) {
-            if(result){
+                    for (var i = 0; i < result.length; i++)
+                        posts.mustVisits.push(result[i]);
 
-                for (var i = 0; i < result.length; i++)
-                    posts.mustVisits.push(result[i]);
+                    console.log("Fetching must visits..." + posts.mustVisits.length);
+                }
+            }),
 
-                console.log("Fetching must visits..." + posts.mustVisits.length);
-            }
-        })
+            // Must-Eats
+            findTop5("must-eats", function(result) {
+                if(result){
+                    for (var i = 0; i < result.length; i++)
+                        posts.mustEats.push(result[i]);
+                    console.log("Fetching must eats..." + posts.mustEats.length);
+                }
+            }),
 
-         // Must-Eats
-        await findTop5("must-eats", function(result) {
-            if(result){
-                for (var i = 0; i < result.length; i++)
-                    posts.mustEats.push(result[i]);
-                console.log("Fetching must eats..." + posts.mustEats.length);
-            }
-        })
-
+            // Must-Dos
+            findTop5("must-dos", function(result) {
+                if(result){
+                    for (var i = 0; i < result.length; i++)
+                        posts.mustDos.push(result[i]);
+                        console.log("Fetching must dos..." + posts.mustDos.length);
+                }
+            }),
+        ])
+        
         params.posts = posts;
         console.log("Rendering home page...");
         res.render('home', params);
