@@ -39,37 +39,43 @@ const controller = {
             })
         }
 
-        await Promise.all([
-            // Must-Visits
-            findTop5("must-visits", function(result) {
-                if(result){
-
-                    for (var i = 0; i < result.length; i++)
-                        posts.mustVisits.push(result[i]);
-
-                    console.log("Fetching must visits..." + posts.mustVisits.length);
-                }
-            }),
-
-            // Must-Eats
-            findTop5("must-eats", function(result) {
-                if(result){
-                    for (var i = 0; i < result.length; i++)
-                        posts.mustEats.push(result[i]);
-                    console.log("Fetching must eats..." + posts.mustEats.length);
-                }
-            }),
-
-            // Must-Dos
-            findTop5("must-dos", function(result) {
-                if(result){
-                    for (var i = 0; i < result.length; i++)
-                        posts.mustDos.push(result[i]);
-                        console.log("Fetching must dos..." + posts.mustDos.length);
-                }
-            }),
-        ])
+        let findPosts = async function() {
+            await Promise.all([
+                // Must-Visits
+                findTop5("must-visits", function(result) {
+                    if(result){
+                        for (var i = 0; i < result.length; i++)
+                            posts.mustVisits.push(result[i]);
+    
+                        console.log("Fetching must visits..." + posts.mustVisits.length);
+                        return true;
+                    }
+                }),
+    
+                // Must-Eats
+                findTop5("must-eats", function(result) {
+                    if(result){
+                        for (var i = 0; i < result.length; i++)
+                            posts.mustEats.push(result[i]);
+                        console.log("Fetching must eats..." + posts.mustEats.length);
+                        return true;
+                    }
+                }),
+    
+                // Must-Dos
+                findTop5("must-dos", function(result) {
+                    if(result){
+                        for (var i = 0; i < result.length; i++)
+                            posts.mustDos.push(result[i]);
+                            console.log("Fetching must dos..." + posts.mustDos.length);
+                        return true;
+                    }
+                }),
+            ])
+        }
         
+        await findPosts();
+
         params.posts = posts;
         console.log("Rendering home page...");
         res.render('home', params);
