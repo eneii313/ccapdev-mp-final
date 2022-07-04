@@ -66,10 +66,12 @@ const controller = {
                     console.log("Fetching must dos..." + posts.mustDos.length);
             }
         })
+        
+        .then(function() {
+            params.posts = posts;
 
-        params.posts = posts;
-        console.log("Rendering home page...");
-        res.render('home', params);
+            res.render('home', params);
+        })
 
     },
 
