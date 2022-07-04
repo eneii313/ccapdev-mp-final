@@ -49,24 +49,29 @@ const controller = {
         })
 
 
-         // Must-Eats
-        await findTop5("must-eats", function(result) {
-            if(result){
-                for (var i = 0; i < result.length; i++)
-                    posts.mustEats.push(result[i]);
-                console.log("Fetching must eats..." + posts.mustEats.length);
-            }
-        })
+        .then (
+            // Must-Eats
+            await findTop5("must-eats", function(result) {
+                if(result){
+                    for (var i = 0; i < result.length; i++)
+                        posts.mustEats.push(result[i]);
+                    console.log("Fetching must eats..." + posts.mustEats.length);
+                }
+            })
+        )
 
-        // Must-Dos
-        await findTop5("must-dos", function(result) {
-            if(result){
-                for (var i = 0; i < result.length; i++)
-                    posts.mustDos.push(result[i]);
-                    console.log("Fetching must dos..." + posts.mustDos.length);
-            }
-        })
+        .then (
+            // Must-Dos
+            await findTop5("must-dos", function(result) {
+                if(result){
+                    for (var i = 0; i < result.length; i++)
+                        posts.mustDos.push(result[i]);
+                        console.log("Fetching must dos..." + posts.mustDos.length);
+                }
+            })
+        )
         
+
         .then(function() {
             params.posts = posts;
 
