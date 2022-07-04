@@ -73,8 +73,8 @@ const controller = {
         
 
         .then(function() {
-            params.posts = posts;
-            console.log("RENDERING HOME PAGE...");
+            console.log("!!!!!!! RENDERING HOME PAGE...");
+            params.posts = posts;    
             res.render('home', params);
         })
 
