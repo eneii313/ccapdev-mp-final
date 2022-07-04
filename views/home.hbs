@@ -43,7 +43,7 @@
                 <div id="must-visits-carousel" class="owl-carousel">
                 
                 {{#each posts.mustVisits}}
-                    {{> home-post-card}}
+                    {{> home-post-card}} {{post.mustVisits.postTitle}}
                 {{/each}}
 
                 </div>
