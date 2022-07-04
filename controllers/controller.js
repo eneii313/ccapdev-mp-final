@@ -37,8 +37,17 @@ const controller = {
             })
         }
 
+        // Must-Dos
+        await findTop5("must-dos", function(result) {
+            if(result){
+                for (var i = 0; i < result.length; i++)
+                    posts.mustDos.push(result[i]);
+                    console.log("Fetching must dos..." + posts.mustDos.length);
+            }
+        })
+
         // Must-Visits
-        findTop5("must-visits", function(result) {
+        await findTop5("must-visits", function(result) {
             if(result){
 
                 for (var i = 0; i < result.length; i++)
@@ -48,35 +57,18 @@ const controller = {
             }
         })
 
-
-        .then (
-            // Must-Eats
-            findTop5("must-eats", function(result) {
-                if(result){
-                    for (var i = 0; i < result.length; i++)
-                        posts.mustEats.push(result[i]);
-                    console.log("Fetching must eats..." + posts.mustEats.length);
-                }
-            })
-        )
-
-        .then (
-            // Must-Dos
-            findTop5("must-dos", function(result) {
-                if(result){
-                    for (var i = 0; i < result.length; i++)
-                        posts.mustDos.push(result[i]);
-                        console.log("Fetching must dos..." + posts.mustDos.length);
-                }
-            })
-        )
-        
-
-        .then(function() {
-            console.log("!!!!!!! RENDERING HOME PAGE...");
-            params.posts = posts;    
-            res.render('home', params);
+         // Must-Eats
+        await findTop5("must-eats", function(result) {
+            if(result){
+                for (var i = 0; i < result.length; i++)
+                    posts.mustEats.push(result[i]);
+                console.log("Fetching must eats..." + posts.mustEats.length);
+            }
         })
+
+        params.posts = posts;
+        console.log("Rendering home page...");
+        res.render('home', params);
 
     },
 
