@@ -28,6 +28,11 @@ Users can also include tags in their posts so that it can be easier to be search
 ## How To Run
 Click [DiscoverLAGUNA](https://discoverlaguna.herokuapp.com/) to see the deployed web application in Heroku.
 
+Local Version
+1. Run Command Prompt
+2. Go to the project file directory, then run the command 'npm install'
+3 Run the command 'node app.js', then go to the indicated post of your local host server.
+
 ## Sample Accounts
 ```text
 Account 1: 
