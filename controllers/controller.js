@@ -38,7 +38,7 @@ const controller = {
         }
 
         // Must-Visits
-        await findTop5("must-visits", function(result) {
+        findTop5("must-visits", function(result) {
             if(result){
 
                 for (var i = 0; i < result.length; i++)
@@ -51,7 +51,7 @@ const controller = {
 
         .then (
             // Must-Eats
-            await findTop5("must-eats", function(result) {
+            findTop5("must-eats", function(result) {
                 if(result){
                     for (var i = 0; i < result.length; i++)
                         posts.mustEats.push(result[i]);
@@ -62,7 +62,7 @@ const controller = {
 
         .then (
             // Must-Dos
-            await findTop5("must-dos", function(result) {
+            findTop5("must-dos", function(result) {
                 if(result){
                     for (var i = 0; i < result.length; i++)
                         posts.mustDos.push(result[i]);
@@ -74,7 +74,7 @@ const controller = {
 
         .then(function() {
             params.posts = posts;
-
+            console.log("RENDERING HOME PAGE...");
             res.render('home', params);
         })
 
