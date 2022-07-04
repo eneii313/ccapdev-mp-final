@@ -40,8 +40,11 @@ const controller = {
         // Must-Visits
         await findTop5("must-visits", function(result) {
             if(result){
+
                 for (var i = 0; i < result.length; i++)
                     posts.mustVisits.push(result[i]);
+
+                console.log("Fetching must visits..." + posts.mustVisits.length);
             }
         })
 
@@ -51,6 +54,7 @@ const controller = {
             if(result){
                 for (var i = 0; i < result.length; i++)
                     posts.mustEats.push(result[i]);
+                console.log("Fetching must eats..." + posts.mustEats.length);
             }
         })
 
@@ -59,11 +63,12 @@ const controller = {
             if(result){
                 for (var i = 0; i < result.length; i++)
                     posts.mustDos.push(result[i]);
+                    console.log("Fetching must dos..." + posts.mustDos.length);
             }
         })
 
         params.posts = posts;
-
+        console.log("Rendering home page...");
         res.render('home', params);
 
     },
