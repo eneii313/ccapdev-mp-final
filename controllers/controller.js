@@ -12,7 +12,7 @@ const controller = {
     },
 
     // Home Page
-    getHomePage: function(req, res) {
+    getHomePage: async function(req, res) {
         var params = {
             loggedIn : res.locals.loggedIn,
             displayFooter : true,
@@ -25,8 +25,8 @@ const controller = {
         }
 
 
-        function findTop5(category, callback){
-            Post.aggregate([
+        async function findTop5(category, callback){
+            await Post.aggregate([
                 {$match: {postCategory: category}},
                 {$addFields: {postLikesCount: {$size: "$postLikes"}}},
                 {$sort: {postLikesCount: -1} },
@@ -38,7 +38,7 @@ const controller = {
         }
 
         // Must-Visits
-        findTop5("must-visits", function(result) {
+        await findTop5("must-visits", function(result) {
             if(result){
                 for (var i = 0; i < result.length; i++)
                     posts.mustVisits.push(result[i]);
@@ -47,7 +47,7 @@ const controller = {
 
 
          // Must-Eats
-        findTop5("must-eats", function(result) {
+        await findTop5("must-eats", function(result) {
             if(result){
                 for (var i = 0; i < result.length; i++)
                     posts.mustEats.push(result[i]);
@@ -55,7 +55,7 @@ const controller = {
         })
 
         // Must-Dos
-        findTop5("must-dos", function(result) {
+        await findTop5("must-dos", function(result) {
             if(result){
                 for (var i = 0; i < result.length; i++)
                     posts.mustDos.push(result[i]);
