@@ -33,6 +33,16 @@ Local Version
 2. Go to the project file directory, then run the command 'npm install'
 3. Run the command 'node app.js', then go to the indicated post of your local host server.
 
+## Screenshots
+### Home Page
+![Home Page](https://github.com/eneii313/ccapdev-mp-final/blob/main/discoverLAGUNA.JPG?raw=true)
+
+### Signup Page
+![Signup Page](https://github.com/eneii313/ccapdev-mp-final/blob/main/dl_signup.JPG?raw=true)
+
+### Sample Post Page
+![Sample Post Page](https://github.com/eneii313/ccapdev-mp-final/blob/main/dl_post.jpg?raw=true)
+
 ## Sample Accounts
 ```text
 Account 1: 
