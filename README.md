@@ -26,7 +26,8 @@ Users can also include tags in their posts so that it can be easier to be search
 + A logged in user can delete his account. The user will be asked to enter his current password to permanently delete his account. The user’s profile page, posts and comments will be removed from the website.
 
 ## How To Run
-Click [DiscoverLAGUNA](https://discoverlaguna.herokuapp.com/) to see the deployed web application in Heroku.
+~~Click [DiscoverLAGUNA](https://discoverlaguna.herokuapp.com/) to see the deployed web application in Heroku.~~ <br />
+Click [DiscoverLAGUNA](https://discover-laguna.vercel.app/) to see the deployed web application in Vercel.
 
 Local Version
 1. Run Command Prompt
