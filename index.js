@@ -15,9 +15,9 @@ const db = require('./models/db.js');
 require('./controllers/passport.js')(passport);
 
 // Database Models
-const userDB = require('./models/users');
-const postDB = require('./models/posts');
-const commentDB = require('./models/comments');
+const userDB = require('./models/users.js');
+const postDB = require('./models/posts.js');
+const commentDB = require('./models/comments.js');
 
 
 const app = express();
