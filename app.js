@@ -68,6 +68,9 @@ app.use(fileUpload());
 
 
 // Handlebars
+var path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'hbs');
 app.engine('hbs', engine ({
     layoutsDir: __dirname + '/views/layouts',
